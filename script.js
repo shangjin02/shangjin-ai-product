@@ -29,6 +29,7 @@ setActiveNav();
 const contactControl = document.querySelector('.contact-control');
 const contactToggle = document.querySelector('.header-contact');
 const contactPopover = document.querySelector('.contact-popover');
+const contactClose = document.querySelector('.contact-close');
 const copyPhoneButton = document.querySelector('[data-copy-phone]');
 const copyStatus = document.querySelector('.copy-status');
 
@@ -44,6 +45,10 @@ contactToggle?.addEventListener('click', (event) => {
 });
 
 contactControl?.addEventListener('click', (event) => event.stopPropagation());
+contactClose?.addEventListener('click', () => {
+  setContactOpen(false);
+  contactToggle?.focus();
+});
 document.addEventListener('click', () => setContactOpen(false));
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
