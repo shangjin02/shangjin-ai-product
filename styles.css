@@ -40,9 +40,11 @@ a { color: inherit; }
 .nav-links a:hover::after, .nav-links a.active::after { right: 0; }
 .contact-control { position: relative; justify-self: end; }
 .header-contact { padding: .25rem 0; color: var(--ink); background: transparent; border: 0; border-bottom: 1px solid var(--ink); font: inherit; font-weight: 750; cursor: pointer; }
-.contact-popover { position: absolute; top: calc(100% + 1rem); right: 0; width: 290px; padding: 1rem; color: white; background: var(--ink); border: 1px solid rgba(255,255,255,.18); box-shadow: 8px 8px 0 var(--cyan); opacity: 0; visibility: hidden; transform: translateY(-6px); transition: opacity .18s ease, transform .18s ease, visibility .18s; }
+.contact-popover { position: absolute; top: calc(100% + 1rem); right: 0; width: 290px; padding: 1rem 3.2rem 1rem 1rem; color: white; background: var(--ink); border: 1px solid rgba(255,255,255,.18); box-shadow: 8px 8px 0 var(--cyan); opacity: 0; visibility: hidden; transform: translateY(-6px); transition: opacity .18s ease, transform .18s ease, visibility .18s; }
 .contact-control.open .contact-popover { opacity: 1; visibility: visible; transform: translateY(0); }
 .contact-popover > span { color: #9fb1bd; font-size: .75rem; font-weight: 750; letter-spacing: .08em; }
+.contact-close { position: absolute; top: .7rem; right: .7rem; display: grid; place-items: center; width: 30px; height: 30px; padding: 0; color: white; background: transparent; border: 1px solid rgba(255,255,255,.28); font: 400 1.35rem/1 sans-serif; cursor: pointer; transition: color .18s ease, background .18s ease, border-color .18s ease; }
+.contact-close:hover, .contact-close:focus-visible { color: var(--ink); background: var(--cyan); border-color: var(--cyan); outline: none; }
 .phone-row { display: grid; grid-template-columns: 1fr auto; gap: .65rem; align-items: center; margin-top: .75rem; }
 .phone-row a { color: white; font-size: 1.22rem; font-weight: 820; letter-spacing: .03em; text-decoration: none; }
 .phone-row button { min-height: 36px; padding: 0 .75rem; color: var(--ink); background: var(--yellow); border: 0; font-weight: 800; cursor: pointer; }
@@ -56,7 +58,7 @@ a { color: inherit; }
 .eyebrow, .section-index { margin: 0 0 1.25rem; font-size: .78rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
 .signal { display: inline-block; width: 8px; height: 8px; margin-right: .35rem; border-radius: 50%; background: #1bd27d; box-shadow: 0 0 0 5px rgba(27,210,125,.13); }
 .hero h1 { margin: 0; font-size: clamp(3.15rem, 4.15vw, 4.25rem); line-height: 1.12; letter-spacing: -.052em; font-weight: 850; text-wrap: balance; }
-.hero h1 span { display: block; margin-top: .12em; color: transparent; -webkit-text-stroke: 1.5px var(--ink); line-height: 1.12; }
+.hero h1 span { display: block; width: fit-content; margin-top: .12em; color: var(--ink); background: linear-gradient(transparent 76%, rgba(89,230,255,.68) 76%); font-family: "PingFang SC", "Microsoft YaHei", system-ui, sans-serif; font-weight: 800; line-height: 1.12; -webkit-text-stroke: 0; }
 .hero-intro { max-width: 680px; margin: 2rem 0 0; color: #3e4d56; font-size: clamp(1.05rem, 1.5vw, 1.22rem); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: .85rem; margin-top: 2.2rem; }
 .button { display: inline-flex; align-items: center; justify-content: center; gap: 1rem; min-height: 50px; padding: 0 1.15rem; text-decoration: none; font-weight: 760; border: 1px solid var(--ink); transition: transform .2s ease, box-shadow .2s ease; }
